@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   })
 });
 router.get('/wel', function(req, res, next) {
-    res.send('ghg');
+    res.send('Dhoni ka birthday aaya');
 });
 
 
