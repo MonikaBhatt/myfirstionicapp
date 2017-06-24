@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 var URL="mongodb://mnu:2085monu@ds133192.mlab.com:33192/mona"
 const db=require('monk')(URL)
-const docs =db.get('monu')
+const docs =db.get('mona')
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/push', function(req, res, next) {
  // res.render('index', { title: 'Express' });
 
-  docs.insert({"name":"monku"},function(err,docs){
+  docs.update({"id":"5e438", "name":"monika"},{$push:{"Group":{"name":"users1"}}},function(err,docs){
       if(err) console.log(err)
   else  res.send("hurrah");
   })
