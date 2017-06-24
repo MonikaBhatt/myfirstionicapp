@@ -12,6 +12,18 @@ router.get('/push', function(req, res, next) {
   else  res.send("hurrah");
   })
 });
+router.get('/welo', function(req, res, next) {
+    docs.find({"age":"90"},function(err,docs){
+        if(err) console.log(err);
+        else
+            res.json(docs[0]);
+    })
+});
+
+router.get('/wel', function(req, res, next) {
+    res.find('mahi');
+});
+
 router.get('/wel', function(req, res, next) {
     res.send('Dhoni ka birthday aaya');
 });
