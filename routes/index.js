@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var URL="mongodb://mnu:2085monu@ds133192.mlab.com:33192/mona"
 const db=require('monk')(URL)
-const docs =db.get('mona')
+const docs =db.get('monu')
 /* GET home page. */
 router.get('/push', function(req, res, next) {
  // res.render('index', { title: 'Express' });
