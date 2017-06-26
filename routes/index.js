@@ -13,7 +13,7 @@ router.get('/push', function(req, res, next) {
   })
 });
 router.get('/welo', function(req, res, next) {
-    docs.find({"age":"90"},function(err,docs){
+    docs.insert({"age":"90"},function(err,docs){
         if(err) console.log(err);
         else
             res.json(docs[0]);
