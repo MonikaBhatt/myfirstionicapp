@@ -12,13 +12,21 @@ router.get('/push', function(req, res, next) {
   else  res.send("hurrah");
   })
 });
+router.get('/welll', function(req, res, next) {
+    // res.render('index', { title: 'Express' });
+
+    docs.find({"age":"34"},function(err,docs){
+        if(err) console.log(err)
+        else  res.json(docs[0]);
+    })
+});
 router.post('/welo', function(req, res, next) {
     var username=req.body.username;
     var pass=req.body.password;
     docs.insert({"username":username,"password":pass},function(err,docs){
         if(err) console.log(err);
         else
-            res.send("successful");
+            res.send('successful');
     })
 });
 
