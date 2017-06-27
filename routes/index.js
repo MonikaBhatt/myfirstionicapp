@@ -22,11 +22,11 @@ router.post('/welo', function(req, res, next) {
     })
 });
 
-router.get('/wel', function(req, res, next) {
+router.get('/weli', function(req, res, next) {
     res.find('mahi');
 });
 
-router.get('/wel', function(req, res, next) {
+router.get('/well', function(req, res, next) {
     res.send('Dhoni ka birthday aaya');
 });
 
