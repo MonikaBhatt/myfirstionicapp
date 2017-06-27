@@ -13,9 +13,9 @@ router.get('/push', function(req, res, next) {
   })
 });
 router.post('/welo', function(req, res, next) {
-    var username=req.body.name;
+    var username=req.body.username;
     var pass=req.body.password;
-    docs.insert({"name":username,"password":pass},function(err,docs){
+    docs.insert({"username":username,"password":pass},function(err,docs){
         if(err) console.log(err);
         else
             res.send("successful");
