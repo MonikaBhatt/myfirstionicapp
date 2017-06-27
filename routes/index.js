@@ -12,11 +12,13 @@ router.get('/push', function(req, res, next) {
   else  res.send("hurrah");
   })
 });
-router.get('/welo', function(req, res, next) {
-    docs.insert({"age":"90"},function(err,docs){
+router.post('/welo', function(req, res, next) {
+    var username=req.body.name;
+    var pass=req.body.password;
+    docs.insert({"name":username,"password":pass},function(err,docs){
         if(err) console.log(err);
         else
-            res.json(docs[0]);
+            res.send("successful");
     })
 });
 
