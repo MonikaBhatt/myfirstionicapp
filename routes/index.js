@@ -16,7 +16,7 @@ router.get('/push', function(req, res, next) {
 router.get('/welll', function(req, res, next) {
     // res.render('index', { title: 'Express' });
 
-    docs.find({"age":"34"},function(err,docs){
+    docs.find({"age":"90"},function(err,docs){
         if(err) console.log(err)
         else  res.json(docs[0]);
     })
