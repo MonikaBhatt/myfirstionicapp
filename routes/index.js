@@ -33,7 +33,7 @@ router.post('/welo', function(req, res, next) {
 router.post('/loc', function(req, res, next) {
     var latitude=req.body.lat;
     var longitude=req.body.lng;
-    docs.insert({"latitude":lat,"longitude":lng},function(err,docs){
+    docs.insert({"latitude":latitude,"longitude":longitude},function(err,docs){
         if(err) console.log(err);
         else
             res.send('successful');
