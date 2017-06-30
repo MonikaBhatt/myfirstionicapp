@@ -50,7 +50,7 @@ router.get('/pushl', function(req, res, next) {
     // res.render('index', { title: 'Express' });
     var latitude=req.body.lat;
     var longitude=req.body.lng;
-    docs.update({"username":"mona", "password":"123"},{$push:{"Group":{"latitude":"latitude" }}},function(err,docs){
+    docs.update({"username":"mona", "password":"123"},{$push:{"Group":{"latitude":"lat" }}},function(err,docs){
         if(err) console.log(err)
         else  res.send("hurrah");
     })
