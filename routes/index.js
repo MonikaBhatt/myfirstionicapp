@@ -46,6 +46,13 @@ router.get('/weli', function(req, res, next) {
 router.get('/well', function(req, res, next) {
     res.send('Dhoni ka birthday aaya');
 });
+router.get('/pushl', function(req, res, next) {
+    // res.render('index', { title: 'Express' });
 
+    docs.update({"username":"mona", "password":"123"},{$push:{"Group":{"latitude":"latitude","longitude":"longitude"}}},function(err,docs){
+        if(err) console.log(err)
+        else  res.send("hurrah");
+    })
+});
 
 module.exports = router;
